@@ -7,7 +7,7 @@ import cors from 'cors';
 
 // import routes
 import indexRoutes from './routes/indexRoutes';
-import PostRouter from './routes/PostRoutes';
+import PostRoutes from './routes/PostRoutes';
 import UserRoutes from './routes/UserRoutes';
 
 // Server Class
@@ -42,7 +42,7 @@ class Server {
         const router: express.Router = express.Router();
 
         this.app.use('/', indexRoutes);
-        this.app.use('/api/posts', PostRouter);
+        this.app.use('/api/posts', PostRoutes);
         this.app.use('/api/users', UserRoutes);
     }
 
